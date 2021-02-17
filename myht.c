@@ -13,7 +13,7 @@ int main () {
 	hash.T2 = load_array(SIZE);
 
 	if (!hash.T1 || !hash.T2) {
-		perror("Falaha ao alocar na memória");
+		perror("Falha ao alocar na memória");
 		return 1;
 	}
 	// Função que lê stdin até encontrar o fim do arquivo (EOF ou ctrl+d)
