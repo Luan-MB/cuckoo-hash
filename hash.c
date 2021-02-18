@@ -1,3 +1,5 @@
+// Luan Machado Bernardt | GRR20190363
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -123,7 +125,7 @@ void print_hash(t_hash hash) {
 	int len = 0;
 
 	aux = load_array(SIZE * 2);
-
+	// Varre ambas as tabelas de hash e coloca as chaves encontradas em aux
 	for (i=0;i<SIZE;i++)
 		if (hash.T1[i] != -2 && (hash.T1[i] != -1)) {
 			aux[len] = hash.T1[i];
@@ -134,9 +136,9 @@ void print_hash(t_hash hash) {
 			aux[len] = hash.T2[i];
 			len++;
 		}
-
+	// Ordena-se aux e mordem crescente
 	insertion_sort(aux,len);
-
+	// Busca-se os elementos de aux no hash, imprimindo a chave, sua tabela e indice
 	for (i=0;i<len;i++) {
 		k = search_key(aux[i], hash);
 		if (hash.T1[k] == aux[i])
