@@ -1,4 +1,7 @@
-#include <stdio.h>
+// Luan Machado Bernardt | GRR20190363
+
+#ifndef __HASH__
+#define __HASH__
 
 typedef struct {
 
@@ -18,3 +21,5 @@ void remove_key(int key, t_hash hash);
 void insertion_sort(int *aux, int len);
 void print_hash(t_hash hash);
 void free_hash(t_hash hash);
+
+#endif
